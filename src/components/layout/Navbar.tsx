@@ -20,101 +20,124 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-brand-200 bg-white/80 backdrop-blur-md">
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
+    <header className="sticky top-0 z-50 w-full border-b border-white/20 bg-white/70 backdrop-blur-xl shadow-sm">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
+        
+        {/* Logo */}
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-            <span className="sr-only">Omoora</span>
-            {/* Replaced Image with stylized text for placeholder until real logo is available */}
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-brand-300 to-pastel-gold text-white font-playfair font-bold text-xl shadow-sm">
+          <Link href="/" className="flex items-center gap-2">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full 
+              bg-gradient-to-tr from-brand-400 via-brand-300 to-pastel-gold 
+              text-white font-playfair font-bold text-xl shadow-md ring-2 ring-white/50">
               O
             </div>
-            <span className="font-playfair font-semibold text-xl text-foreground tracking-wide">Omoora</span>
+            <span className="font-playfair font-semibold text-xl tracking-wide bg-gradient-to-r from-brand-600 to-pastel-gold bg-clip-text text-transparent">
+              Omoora
+            </span>
           </Link>
         </div>
+
+        {/* Mobile Button */}
         <div className="flex lg:hidden">
           <button
-            type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-muted-foreground"
+            className="p-2 rounded-md text-muted-foreground hover:bg-black/5"
           >
-            <span className="sr-only">Open main menu</span>
-            <Menu aria-hidden="true" className="h-6 w-6" />
+            <Menu className="h-6 w-6" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-8">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-brand-600",
-                pathname === item.href ? "text-brand-600 font-semibold" : "text-foreground"
-              )}
-            >
-              {item.name}
-            </Link>
-          ))}
+
+        {/* Desktop Nav */}
+        <div className="hidden lg:flex items-center gap-6">
+          {navigation.map((item) => {
+            const isActive = pathname === item.href;
+
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={cn(
+                  "group relative px-3 py-2 text-sm font-medium transition-all duration-300",
+                  isActive
+                    ? "text-brand-600"
+                    : "text-foreground/80 hover:text-brand-600"
+                )}
+              >
+                {item.name}
+
+                {/* Animated underline */}
+                <span
+                  className={cn(
+                    "absolute left-0 -bottom-1 h-[2px] w-full bg-gradient-to-r from-brand-400 to-pastel-gold transition-transform duration-300 origin-left",
+                    isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                  )}
+                />
+              </Link>
+            );
+          })}
         </div>
+
+        {/* CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             href="/#contact"
-            className="rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 transition-colors"
+            className="relative overflow-hidden rounded-full bg-gradient-to-r from-brand-500 to-brand-600 px-6 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95"
           >
-            Book Free Demo
+            <span className="relative z-10">Book Free Demo</span>
+            <span className="absolute inset-0 bg-white/10 opacity-0 hover:opacity-100 transition-opacity duration-300" />
           </Link>
         </div>
       </nav>
-      
+
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden" role="dialog" aria-modal="true">
-          <div className="fixed inset-0 z-50 bg-black/20 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 shadow-xl">
+        <div className="lg:hidden">
+          {/* Overlay */}
+          <div
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+
+          {/* Panel */}
+          <div className="fixed right-0 top-0 h-full w-full max-w-sm bg-white/80 backdrop-blur-xl shadow-xl z-50 p-6 animate-in slide-in-from-right duration-300">
+            
             <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                <span className="sr-only">Omoora</span>
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-tr from-brand-300 to-pastel-gold text-white font-playfair font-bold">
-                  O
-                </div>
-                <span className="font-playfair font-semibold text-lg text-foreground">Omoora</span>
-              </Link>
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 rounded-md p-2.5 text-muted-foreground"
-              >
-                <span className="sr-only">Close menu</span>
-                <X aria-hidden="true" className="h-6 w-6" />
+              <span className="font-playfair font-semibold text-lg">Omoora</span>
+              <button onClick={() => setMobileMenuOpen(false)}>
+                <X className="h-6 w-6" />
               </button>
             </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-100">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={cn(
-                        "-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 hover:bg-gray-50",
-                        pathname === item.href ? "text-brand-600 bg-brand-50" : "text-foreground"
-                      )}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-                <div className="py-6">
+
+            <div className="mt-8 space-y-3">
+              {navigation.map((item) => {
+                const isActive = pathname === item.href;
+
+                return (
                   <Link
-                    href="/#contact"
+                    key={item.name}
+                    href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-brand-600 hover:bg-gray-50"
+                    className={cn(
+                      "block rounded-lg px-4 py-2 text-base font-medium transition",
+                      isActive
+                        ? "bg-brand-50 text-brand-600"
+                        : "hover:bg-black/5"
+                    )}
                   >
-                    Book Free Demo
+                    {item.name}
                   </Link>
-                </div>
-              </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-6">
+              <Link
+                href="/#contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-center rounded-full bg-brand-600 px-4 py-2.5 text-white font-semibold"
+              >
+                Book Free Demo
+              </Link>
             </div>
           </div>
         </div>
