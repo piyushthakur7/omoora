@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -25,13 +27,17 @@ export function Navbar() {
         
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full 
-              bg-gradient-to-tr from-brand-400 via-brand-300 to-pastel-gold 
-              text-white font-playfair font-bold text-xl shadow-md ring-2 ring-white/50">
-              O
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative h-12 w-12 overflow-hidden transition-transform duration-300 group-hover:scale-105">
+              <Image 
+                src="/logo.png" 
+                alt="Omoora Logo" 
+                fill 
+                className="object-contain"
+                priority
+              />
             </div>
-            <span className="font-playfair font-semibold text-xl tracking-wide bg-gradient-to-r from-brand-600 to-pastel-gold bg-clip-text text-transparent">
+            <span className="font-playfair font-bold text-2xl tracking-tight bg-gradient-to-r from-brand-800 via-brand-600 to-brand-800 bg-clip-text text-transparent">
               Omoora
             </span>
           </Link>
@@ -48,7 +54,7 @@ export function Navbar() {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-8">
           {navigation.map((item) => {
             const isActive = pathname === item.href;
 
@@ -81,10 +87,10 @@ export function Navbar() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             href="/#contact"
-            className="relative overflow-hidden rounded-full bg-gradient-to-r from-brand-500 to-brand-600 px-6 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95"
+            className="relative overflow-hidden rounded-full bg-gradient-to-r from-brand-600 to-brand-700 px-8 py-3 text-sm font-bold text-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95"
           >
-            <span className="relative z-10">Book Free Demo</span>
-            <span className="absolute inset-0 bg-white/10 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+            <span className="relative z-10 uppercase tracking-wider">Book Free Demo</span>
+            <span className="absolute inset-0 bg-white/20 opacity-0 hover:opacity-100 transition-opacity duration-300" />
           </Link>
         </div>
       </nav>
@@ -102,7 +108,17 @@ export function Navbar() {
           <div className="fixed right-0 top-0 h-full w-full max-w-sm bg-white/80 backdrop-blur-xl shadow-xl z-50 p-6 animate-in slide-in-from-right duration-300">
             
             <div className="flex items-center justify-between">
-              <span className="font-playfair font-semibold text-lg">Omoora</span>
+              <div className="flex items-center gap-2">
+                <div className="relative h-8 w-8">
+                  <Image 
+                    src="/logo.png" 
+                    alt="Omoora Logo" 
+                    fill 
+                    className="object-contain"
+                  />
+                </div>
+                <span className="font-playfair font-semibold text-lg">Omoora</span>
+              </div>
               <button onClick={() => setMobileMenuOpen(false)}>
                 <X className="h-6 w-6" />
               </button>

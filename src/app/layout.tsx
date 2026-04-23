@@ -36,6 +36,10 @@ export const metadata: Metadata = {
     title: "Omoora Art & Design Studio",
     description: "Discover a unique combination of Art Education, Healing, and Transformation Services.",
   },
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({

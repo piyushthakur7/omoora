@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -6,11 +7,18 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-brand-300 to-pastel-gold text-white font-playfair font-bold text-xl shadow-sm">
-                O
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative h-12 w-12 overflow-hidden transition-transform duration-300 group-hover:scale-110">
+                <Image 
+                  src="/logo.png" 
+                  alt="Omoora Logo" 
+                  fill 
+                  className="object-contain"
+                />
               </div>
-              <span className="font-playfair font-semibold text-2xl text-foreground tracking-wide">Omoora</span>
+              <span className="font-playfair font-bold text-2xl tracking-tight text-foreground">
+                Omoora
+              </span>
             </Link>
             <p className="text-sm leading-6 text-muted-foreground max-w-xs">
               Beyond Art. A Creative Awakening. <br />
