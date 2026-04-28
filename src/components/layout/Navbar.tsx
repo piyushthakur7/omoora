@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, MapPin, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -150,10 +150,38 @@ export function Navbar() {
               <Link
                 href="/#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block text-center rounded-full bg-brand-600 px-4 py-2.5 text-white font-semibold"
+                className="block text-center rounded-full bg-brand-600 px-4 py-2.5 text-white font-semibold transition-all hover:bg-brand-700"
               >
                 Book Free Demo
               </Link>
+            </div>
+
+            {/* Social Links in Mobile Menu */}
+            <div className="mt-10 flex items-center justify-center gap-8 border-t border-brand-100 pt-8">
+              <a 
+                href="https://www.instagram.com/omoora_by_ipaartsacademy?utm_source=qr&igsh=MW03eGMzenFrNWJmNg==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-brand-600 transition-colors"
+              >
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a 
+                href="https://whatsapp.com/channel/0029ValsEV9ATRSm8y6Vpc1t" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-brand-600 transition-colors"
+              >
+                <MessageCircle className="h-6 w-6" />
+              </a>
+              <a 
+                href="https://maps.app.goo.gl/A3fmZy4DyXtMSKzv6?g_st=awb" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-brand-600 transition-colors"
+              >
+                <MapPin className="h-6 w-6" />
+              </a>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactForm } from "@/components/ui/ContactForm";
+import { Instagram, MapPin, MessageCircle } from "lucide-react";
 
 export default function Home() {
   return (
@@ -126,8 +127,67 @@ export default function Home() {
           <div className="mx-auto max-w-2xl text-center mb-16">
             <SectionHeading title="Begin Your Journey" subtitle="Ready to explore your creativity or find inner peace? Book a free demo or consultation today." />
           </div>
-          <div className="mx-auto max-w-xl p-8 rounded-2xl bg-white shadow-lg border border-brand-100">
-            <ContactForm />
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-playfair font-bold text-foreground">Contact Information</h3>
+                <p className="mt-4 text-muted-foreground">
+                  Feel free to reach out to us through any of these platforms or visit our studio.
+                </p>
+              </div>
+              
+              <div className="space-y-6">
+                <a 
+                  href="https://maps.app.goo.gl/A3fmZy4DyXtMSKzv6?g_st=awb" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-xl border border-brand-100 hover:border-brand-200 hover:bg-brand-50 transition-colors group"
+                >
+                  <div className="h-12 w-12 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                    <MapPin className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">Visit Our Studio</p>
+                    <p className="text-sm text-muted-foreground">View on Google Maps</p>
+                  </div>
+                </a>
+                
+                <a 
+                  href="https://whatsapp.com/channel/0029ValsEV9ATRSm8y6Vpc1t" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-xl border border-brand-100 hover:border-brand-200 hover:bg-brand-50 transition-colors group"
+                >
+                  <div className="h-12 w-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                    <MessageCircle className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">WhatsApp Channel</p>
+                    <p className="text-sm text-muted-foreground">Join for latest updates</p>
+                  </div>
+                </a>
+                
+                <a 
+                  href="https://www.instagram.com/omoora_by_ipaartsacademy?utm_source=qr&igsh=MW03eGMzenFrNWJmNg==" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-xl border border-brand-100 hover:border-brand-200 hover:bg-brand-50 transition-colors group"
+                >
+                  <div className="h-12 w-12 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 group-hover:bg-pink-600 group-hover:text-white transition-colors">
+                    <Instagram className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">Instagram</p>
+                    <p className="text-sm text-muted-foreground">@omoora_by_ipaartsacademy</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div className="p-8 rounded-2xl bg-white shadow-lg border border-brand-100">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>
