@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, MapPin, MessageCircle } from "lucide-react";
+import { Camera, MapPin, MessageCircle } from "lucide-react";
 
 export function Footer() {
   return (
@@ -32,7 +32,7 @@ export function Footer() {
               </a>
               <a href="https://www.instagram.com/omoora_by_ipaartsacademy?utm_source=qr&igsh=MW03eGMzenFrNWJmNg==" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-brand-600">
                 <span className="sr-only">Instagram</span>
-                <Instagram className="h-6 w-6" />
+                <Camera className="h-6 w-6" />
               </a>
               <a href="https://whatsapp.com/channel/0029ValsEV9ATRSm8y6Vpc1t" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-brand-600">
                 <span className="sr-only">WhatsApp</span>

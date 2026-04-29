@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Instagram, MapPin, MessageCircle } from "lucide-react";
+import { Menu, X, Camera, MapPin, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -164,7 +164,7 @@ export function Navbar() {
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-brand-600 transition-colors"
               >
-                <Instagram className="h-6 w-6" />
+                <Camera className="h-6 w-6" />
               </a>
               <a 
                 href="https://whatsapp.com/channel/0029ValsEV9ATRSm8y6Vpc1t" 

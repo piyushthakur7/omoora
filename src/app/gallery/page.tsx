@@ -1,19 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { gallery } from "@/data/gallery";
 import { cn } from "@/lib/utils";
+import { Lightbox } from "@/components/ui/Lightbox";
 
 const categories = ["All", "Art", "Workshops", "Events"];
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState("All");
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const filteredGallery = filter === "All" 
     ? gallery 
     : gallery.filter(item => item.category === filter);
+
+  const lightboxImages = filteredGallery.map((item) => ({
+    src: item.src,
+    alt: item.alt,
+    category: item.category,
+  }));
+
+  const handlePrev = useCallback(() => {
+    setLightboxIndex((prev) =>
+      prev !== null ? (prev - 1 + filteredGallery.length) % filteredGallery.length : null
+    );
+  }, [filteredGallery.length]);
+
+  const handleNext = useCallback(() => {
+    setLightboxIndex((prev) =>
+      prev !== null ? (prev + 1) % filteredGallery.length : null
+    );
+  }, [filteredGallery.length]);
 
   return (
     <div className="bg-white min-h-screen py-24 sm:py-32">
@@ -28,7 +48,10 @@ export default function GalleryPage() {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setFilter(category)}
+              onClick={() => {
+                setFilter(category);
+                setLightboxIndex(null);
+              }}
               className={cn(
                 "rounded-full px-6 py-2 text-sm font-medium transition-colors border",
                 filter === category 
@@ -43,13 +66,17 @@ export default function GalleryPage() {
 
         {/* Masonry Grid */}
         <div className="mt-16 columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-          {filteredGallery.map((item) => (
-            <div key={item.id} className="relative overflow-hidden rounded-xl break-inside-avoid shadow-sm hover:shadow-md transition-shadow group">
+          {filteredGallery.map((item, index) => (
+            <div
+              key={item.id}
+              className="relative overflow-hidden rounded-xl break-inside-avoid shadow-sm hover:shadow-md transition-shadow group cursor-pointer"
+              onClick={() => setLightboxIndex(index)}
+            >
               <Image
                 src={item.src}
                 alt={item.alt}
                 width={800}
-                height={item.id % 2 === 0 ? 1200 : 800} // Simulate varying heights for masonry
+                height={item.id % 2 === 0 ? 1200 : 800}
                 className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -67,6 +94,17 @@ export default function GalleryPage() {
           </div>
         )}
       </div>
+
+      {/* Lightbox */}
+      {lightboxIndex !== null && (
+        <Lightbox
+          images={lightboxImages}
+          currentIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onPrev={handlePrev}
+          onNext={handleNext}
+        />
+      )}
     </div>
   );
 }

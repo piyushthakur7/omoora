@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { testimonials } from "@/data/testimonials";
+import { TestimonialGallery } from "@/components/ui/TestimonialGallery";
 
 export const metadata: Metadata = {
   title: "Testimonials & Success Stories",
@@ -52,6 +53,7 @@ export default function TestimonialsPage() {
           </div>
         </div>
 
+        <TestimonialGallery />
       </div>
     </div>
   );
