@@ -30,7 +30,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative h-12 w-12 overflow-hidden transition-transform duration-300 group-hover:scale-105">
               <Image 
-                src="/logo.png" 
+                src="/logo.jpeg" 
                 alt="Omoora Logo" 
                 fill 
                 className="object-contain"
@@ -105,13 +105,13 @@ export function Navbar() {
           />
 
           {/* Panel */}
-          <div className="fixed right-0 top-0 h-full w-full max-w-sm bg-white/80 backdrop-blur-xl shadow-xl z-50 p-6 animate-in slide-in-from-right duration-300">
+          <div className="fixed right-0 top-0 h-full w-full max-w-sm bg-white shadow-2xl z-50 p-6 animate-in slide-in-from-right duration-300">
             
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <div className="relative h-8 w-8">
                   <Image 
-                    src="/logo.png" 
+                    src="/logo.jpeg" 
                     alt="Omoora Logo" 
                     fill 
                     className="object-contain"
