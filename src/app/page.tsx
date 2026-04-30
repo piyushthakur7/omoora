@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactForm } from "@/components/ui/ContactForm";
+import { testimonials } from "@/data/testimonials";
 import { MapPin, MessageCircle } from "lucide-react";
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -198,6 +199,97 @@ export default function Home() {
             <div className="p-8 rounded-2xl bg-white shadow-lg border border-brand-100">
               <ContactForm />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision Section */}
+      <section className="py-24 sm:py-32 bg-white overflow-hidden">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1 relative h-[500px] rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 group">
+              <Image
+                src="/images/site/what-we-do.jpg"
+                alt="Omoora Art Class"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <SectionHeading 
+                title="Mission & Vision" 
+                subtitle="The Essence of Omoora" 
+                centered={false}
+              />
+              <div className="mt-8 space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Founded by IP Arts Academy in 2010, Omoora was born from a simple yet profound realization: art is not just a skill to be learned, but a path to self-discovery and emotional healing.
+                </p>
+                <p>
+                  Our mission is to provide a sanctuary where creativity meets spirituality. We aim to nurture the artist within everyone, helping them find balance, peace, and abundance through the transformative power of artistic expression.
+                </p>
+                <div className="pt-6 grid grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="font-playfair font-bold text-foreground text-2xl mb-2">14+</h4>
+                    <p className="text-sm uppercase tracking-wider">Years of Excellence</p>
+                  </div>
+                  <div>
+                    <h4 className="font-playfair font-bold text-foreground text-2xl mb-2">5000+</h4>
+                    <p className="text-sm uppercase tracking-wider">Students Nurtured</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 sm:py-32 bg-brand-50/50">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <SectionHeading 
+            title="What Our Students Say" 
+            subtitle="Real stories of creativity, growth, and transformation from the Omoora community." 
+          />
+          
+          <div className="mx-auto mt-16 columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+            {testimonials.map((testimonial) => (
+              <div 
+                key={testimonial.id} 
+                className="break-inside-avoid flex flex-col justify-between rounded-3xl bg-white p-8 shadow-sm ring-1 ring-brand-100 hover:shadow-xl transition-all duration-300 group"
+              >
+                <div className="relative">
+                  <div className="text-4xl text-brand-200 font-playfair mb-4 group-hover:text-brand-400 transition-colors">"</div>
+                  <p className="text-base leading-7 text-muted-foreground italic relative z-10">
+                    {testimonial.quote}
+                  </p>
+                </div>
+                <div className="mt-8 flex items-center gap-x-4 border-t border-brand-50 pt-6">
+                  <div className="relative h-12 w-12 rounded-full overflow-hidden shadow-inner ring-2 ring-brand-50 group-hover:ring-brand-200 transition-all">
+                    <Image
+                      className="h-full w-full object-cover"
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      fill
+                    />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground group-hover:text-brand-700 transition-colors">{testimonial.name}</div>
+                    <div className="text-xs leading-5 text-brand-600/80 font-medium">{testimonial.role}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <Link 
+              href="/testimonials" 
+              className="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors"
+            >
+              View More Stories & Gallery <span aria-hidden="true" className="ml-2">&rarr;</span>
+            </Link>
           </div>
         </div>
       </section>
