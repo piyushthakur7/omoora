@@ -32,11 +32,11 @@ export default function Home() {
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
                 Discover a unique combination of Art Education, Healing, and Transformation Services. Whether you are seeking creative skills or emotional growth, Omoora is your sanctuary.
               </p>
-              <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
-                <Link href="/courses" className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 bg-brand-600 text-white hover:bg-brand-700 shadow-sm h-12 px-8 text-base">
+              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-x-6 w-full sm:w-auto">
+                <Link href="/courses" className="inline-flex w-full sm:w-auto items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 bg-brand-600 text-white hover:bg-brand-700 shadow-sm h-12 px-8 text-base">
                   Explore Programs
                 </Link>
-                <Link href="#contact" className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 border border-brand-200 bg-white hover:bg-brand-50 text-foreground h-12 px-8 text-base">
+                <Link href="#contact" className="inline-flex w-full sm:w-auto items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 border border-brand-200 bg-white hover:bg-brand-50 text-foreground h-12 px-8 text-base">
                   Book Free Demo
                 </Link>
               </div>
