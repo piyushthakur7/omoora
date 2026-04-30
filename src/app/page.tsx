@@ -42,8 +42,8 @@ export default function Home() {
             </div>
             <div className="relative mx-auto w-full max-w-lg lg:max-w-none h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-900/10">
               <Image
-                src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1200&auto=format&fit=crop"
-                alt="Abstract art representing creative awakening"
+                src="/images/site/home-hero.jpg"
+                alt="Omoora - Beyond Art, A Creative Awakening"
                 fill
                 className="object-cover"
                 priority
@@ -91,8 +91,8 @@ export default function Home() {
             </div>
             <div className="relative h-[400px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0">
               <Image
-                src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1200&auto=format&fit=crop"
-                alt="Artist working on a canvas"
+                src="/images/site/what-we-do.jpg"
+                alt="What We Do at Omoora - Art Education, Healing & Transformation"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

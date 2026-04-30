@@ -1,4 +1,4 @@
-﻿export const testimonialImages = [
+export const testimonialImages = [
   { category: "Director's Work", src: "/testimonials/dirctor/BeautyPlus_20260424164341828_save.jpg" },
   { category: "Director's Work", src: "/testimonials/dirctor/IMG-20241026-WA0008.jpg" },
   { category: "Director's Work", src: "/testimonials/dirctor/WhatsApp Image 2026-04-24 at 1.11.16 PM.jpeg" },
@@ -231,4 +231,9 @@
   { category: "Workshops & Events", src: "/testimonials/Workshop & Event Highlights-20260428T144821Z-3-001/Workshop & Event Highlights/IMG_2108.JPG" },
   { category: "Workshops & Events", src: "/testimonials/Workshop & Event Highlights-20260428T144821Z-3-001/Workshop & Event Highlights/Messenger_creation_6DD3AF34-59CC-426B-BB29-3E3CF3D74531.jpeg" },
   { category: "Workshops & Events", src: "/testimonials/Workshop & Event Highlights-20260428T144821Z-3-001/Workshop & Event Highlights/Screenshot_20230423_113922_Instagram.jpg" },
+  { category: "Social Feedbacks", src: "/images/testimonials/fb-testimonial-1.jpg" },
+  { category: "Social Feedbacks", src: "/images/testimonials/fb-testimonial-2.jpg" },
+  { category: "Social Feedbacks", src: "/images/testimonials/whatsapp-testimonial-1.jpg" },
+  { category: "Social Feedbacks", src: "/images/testimonials/whatsapp-testimonial-2.jpg" },
+  { category: "Student Creations", src: "/images/testimonials/student-artwork.jpg" },
 ];

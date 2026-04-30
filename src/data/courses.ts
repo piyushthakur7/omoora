@@ -16,7 +16,7 @@ export const courses = [
     priceMax: "12,000",
     category: "Art Courses",
     isPremium: false,
-    image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800&auto=format&fit=crop",
+    image: "/images/courses/foundation-art.jpg",
     cta: "Book Free Demo"
   },
   {
@@ -36,7 +36,7 @@ export const courses = [
     priceMax: "60,000",
     category: "Art Courses",
     isPremium: true,
-    image: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=800&auto=format&fit=crop",
+    image: "/images/courses/diploma-fine-arts.jpg",
     cta: "Apply Now"
   },
   {
@@ -56,7 +56,7 @@ export const courses = [
     priceMax: "5,000",
     category: "Art Courses / Healing Art",
     isPremium: false,
-    image: "https://images.unsplash.com/photo-1600172454520-134a542a2255?q=80&w=800&auto=format&fit=crop",
+    image: "/images/courses/mandala-art.jpg",
     cta: "Join Now"
   },
   {
@@ -76,7 +76,7 @@ export const courses = [
     priceMax: "4,000/month",
     category: "Kids Art Programs / Art Courses",
     isPremium: false,
-    image: "https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=800&auto=format&fit=crop",
+    image: "/images/courses/regular-art-class.jpg",
     cta: "Enroll Now"
   },
   {
@@ -96,7 +96,7 @@ export const courses = [
     priceMax: "50,000",
     category: "Premium Programs",
     isPremium: true,
-    image: "https://images.unsplash.com/photo-1518599904199-0ca897819ddb?q=80&w=800&auto=format&fit=crop",
+    image: "/images/courses/art-healing.jpg",
     cta: "Book Consultation"
   }
 ];

@@ -15,8 +15,8 @@ export default function DirectorProfilePage() {
           
           <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-900/10">
             <Image
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
-              alt="Director Portrait"
+              src="/images/site/director-profile.jpg"
+              alt="Ms. Shivani - Director of Omoora"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
