@@ -7,7 +7,16 @@ import { gallery } from "@/data/gallery";
 import { cn } from "@/lib/utils";
 import { Lightbox } from "@/components/ui/Lightbox";
 
-const categories = ["All", "Art", "Workshops", "Events"];
+const categories = [
+  "All",
+  "Director's Work",
+  "Exhibition Highlights",
+  "Mandala Art",
+  "Omoora Creations",
+  "Student Creations",
+  "Workshops & Events",
+  "Social Feedbacks"
+];
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState("All");
@@ -39,12 +48,12 @@ export default function GalleryPage() {
     <div className="bg-white min-h-screen py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading 
-          title="Our Gallery" 
-          subtitle="Explore the beautiful artwork and moments captured at Omoora Studio." 
+          title="Our Visual Journey" 
+          subtitle="Explore the moments, creations, and highlights that define the Omoora experience." 
         />
         
         {/* Filters */}
-        <div className="mt-12 flex flex-wrap justify-center gap-4">
+        <div className="mt-12 flex flex-wrap justify-center gap-3">
           {categories.map((category) => (
             <button
               key={category}
@@ -53,10 +62,10 @@ export default function GalleryPage() {
                 setLightboxIndex(null);
               }}
               className={cn(
-                "rounded-full px-6 py-2 text-sm font-medium transition-colors border",
+                "rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 border",
                 filter === category 
-                  ? "bg-brand-600 text-white border-brand-600 shadow-md" 
-                  : "bg-white text-foreground border-brand-200 hover:bg-brand-50"
+                  ? "bg-brand-700 text-white border-brand-700 shadow-lg scale-105" 
+                  : "bg-white text-foreground border-brand-100 hover:border-brand-300 hover:bg-brand-50"
               )}
             >
               {category}
