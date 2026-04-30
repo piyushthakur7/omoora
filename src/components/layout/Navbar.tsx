@@ -105,7 +105,7 @@ export function Navbar() {
           />
 
           {/* Panel */}
-          <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-2xl z-[100] p-6 animate-in slide-in-from-right duration-300">
+          <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-white border-l border-brand-100 shadow-2xl z-[100] p-6 animate-in slide-in-from-right duration-300">
             
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -134,10 +134,10 @@ export function Navbar() {
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
-                      "block rounded-lg px-4 py-2 text-base font-medium transition",
+                      "block rounded-xl px-4 py-3 text-base font-medium transition-all duration-200 border",
                       isActive
-                        ? "bg-brand-50 text-brand-600"
-                        : "hover:bg-black/5"
+                        ? "bg-brand-100 border-brand-200 text-brand-700 shadow-sm"
+                        : "bg-white border-brand-50 text-foreground hover:bg-brand-50 hover:border-brand-100 shadow-sm"
                     )}
                   >
                     {item.name}
