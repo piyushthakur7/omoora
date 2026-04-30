@@ -100,12 +100,12 @@ export function Navbar() {
         <div className="lg:hidden">
           {/* Overlay */}
           <div
-            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+            className="fixed inset-0 bg-black/40 backdrop-blur-md z-[90]"
             onClick={() => setMobileMenuOpen(false)}
           />
 
           {/* Panel */}
-          <div className="fixed right-0 top-0 h-full w-full max-w-sm bg-white shadow-2xl z-50 p-6 animate-in slide-in-from-right duration-300">
+          <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-2xl z-[100] p-6 animate-in slide-in-from-right duration-300">
             
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
