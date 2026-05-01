@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     description: "Discover a unique combination of Art Education, Healing, and Transformation Services.",
   },
   icons: {
-    icon: "/logo.jpeg",
-    apple: "/logo.jpeg",
+    icon: "/logofinal.jpeg",
+    apple: "/logofinal.jpeg",
   },
 };
 
