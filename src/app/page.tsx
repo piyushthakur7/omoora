@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { testimonials } from "@/data/testimonials";
@@ -19,19 +22,26 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-brand-50 pt-24 pb-32 sm:pt-32 sm:pb-40">
+      <section className="relative overflow-hidden bg-brand-50 pt-12 pb-20 sm:pt-16 sm:pb-24">
         <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
           <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-pastel-pink to-pastel-blue opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div>
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="mx-auto max-w-2xl text-center lg:text-left lg:mx-0">
-              <h1 className="text-4xl font-playfair tracking-tight text-foreground sm:text-6xl text-balance">
-                Beyond Art. A Creative Awakening.
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                Discover a unique combination of Art Education, Healing, and Transformation Services. Whether you are seeking creative skills or emotional growth, Omoora is your sanctuary.
-              </p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                <h1 className="text-5xl font-playfair tracking-tight text-foreground sm:text-7xl">
+                  <span className="block mb-2 text-brand-700">Beyond Art.</span>
+                  <span className="block text-4xl sm:text-6xl text-muted-foreground font-medium">A Creative Awakening.</span>
+                </h1>
+                <p className="mt-8 text-lg leading-8 text-muted-foreground">
+                  Discover a unique combination of Art Education, Healing, and Transformation Services. Whether you are seeking creative skills or emotional growth, Omoora is your sanctuary.
+                </p>
+              </motion.div>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-x-6 w-full sm:w-auto">
                 <Link href="/courses" className="inline-flex w-full sm:w-auto items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 bg-brand-600 text-white hover:bg-brand-700 shadow-sm h-12 px-8 text-base">
                   Explore Programs
@@ -56,7 +66,7 @@ export default function Home() {
       </section>
 
       {/* About Omoora */}
-      <section className="py-24 sm:py-32 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
             <div className="lg:pr-8 lg:pt-4">
@@ -139,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* Brand Goals Section */}
-      <section className="py-24 sm:py-32 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading 
             title="Our Brand Goals" 
@@ -194,7 +204,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 sm:py-32 bg-white relative">
+      <section id="contact" className="py-12 sm:py-16 bg-white relative">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <SectionHeading title="Begin Your Journey" subtitle="Ready to explore your creativity or find inner peace? Book a free demo or consultation today." />
@@ -265,7 +275,7 @@ export default function Home() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-24 sm:py-32 bg-white overflow-hidden">
+      <section className="py-12 sm:py-16 bg-white overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 relative h-[500px] rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 group">
@@ -307,7 +317,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 sm:py-32 bg-brand-50/50">
+      <section className="py-12 sm:py-16 bg-brand-50/50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading 
             title="What Our Students Say" 
