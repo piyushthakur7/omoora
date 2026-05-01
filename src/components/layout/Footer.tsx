@@ -11,7 +11,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative h-12 w-12 overflow-hidden transition-transform duration-300 group-hover:scale-110">
                 <Image 
-                  src="/logo.jpeg" 
+                  src="/logofinal.jpeg" 
                   alt="Omoora Logo" 
                   fill 
                   className="object-contain"

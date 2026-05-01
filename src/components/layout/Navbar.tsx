@@ -30,7 +30,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative h-12 w-12 overflow-hidden transition-transform duration-300 group-hover:scale-105">
               <Image 
-                src="/logo.jpeg" 
+                src="/logofinal.jpeg" 
                 alt="Omoora Logo" 
                 fill 
                 className="object-contain"
@@ -111,7 +111,7 @@ export function Navbar() {
               <div className="flex items-center gap-2">
                 <div className="relative h-8 w-8">
                   <Image 
-                    src="/logo.jpeg" 
+                    src="/logofinal.jpeg" 
                     alt="Omoora Logo" 
                     fill 
                     className="object-contain"
