@@ -138,6 +138,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Brand Goals Section */}
+      <section className="py-24 sm:py-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <SectionHeading 
+            title="Our Brand Goals" 
+            subtitle="At Omoora, our goals reflect what we stand for and what we aim to create in every life we touch."
+          />
+          
+          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3">
+              {[
+                {
+                  title: "To Inspire Inner Transformation",
+                  description: "We aim to help individuals reconnect with themselves, heal emotionally, and grow through the power of art and conscious practices."
+                },
+                {
+                  title: "To Redefine Healing Through Creativity",
+                  description: "Our goal is to make art not just a skill, but a tool for healing, expression, and self-discovery."
+                },
+                {
+                  title: "To Build a Safe & Empowering Space",
+                  description: "We strive to create an environment where people feel seen, heard, and free to express without judgment."
+                },
+                {
+                  title: "To Deliver Meaningful & Lasting Impact",
+                  description: "Every session, course, and program is designed to create real, deep, and lasting transformation."
+                },
+                {
+                  title: "To Create a Conscious Community",
+                  description: "We aim to build a community of like-minded individuals who value growth, healing, and positive living."
+                },
+                {
+                  title: "To Reach and Transform Lives Globally",
+                  description: "Through online and offline platforms, our goal is to expand Omoora beyond boundaries and touch lives worldwide."
+                },
+                {
+                  title: "To Stand as a Premium & Trusted Brand",
+                  description: "We are committed to offering high-quality, impactful experiences that position Omoora as a leader in art-based healing."
+                }
+              ].map((goal, index) => (
+                <div key={index} className="flex flex-col p-8 rounded-3xl bg-brand-50/30 border border-brand-100 hover:shadow-md transition-all duration-300">
+                  <dt className="text-lg font-playfair font-semibold leading-7 text-foreground mb-3 flex gap-2">
+                    <span className="text-brand-600">{index + 1}.</span>
+                    {goal.title}
+                  </dt>
+                  <dd className="flex flex-auto flex-col text-sm leading-6 text-muted-foreground">
+                    <p className="flex-auto">{goal.description}</p>
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-24 sm:py-32 bg-white relative">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
