@@ -12,10 +12,16 @@ export default function EventsPage() {
   return (
     <div className="bg-white min-h-screen py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <SectionHeading 
-          title="Workshops & Events" 
-          subtitle="Explore our short-term creative workshops and community events designed for quick learning and networking." 
-        />
+        <div className="flex flex-col items-center text-center">
+          <p className="text-brand-600 font-semibold tracking-widest uppercase text-sm mb-4">Create • Heal • Transform</p>
+          <SectionHeading 
+            title="OMOORA Workshops & Events" 
+            subtitle="Where art becomes a tool for confidence, emotional healing, and self-expression." 
+          />
+          <p className="mt-6 text-base leading-7 text-muted-foreground max-w-2xl mx-auto">
+            Not just workshops—these are guided experiences designed to help you or your child build confidence, express emotions, and grow creatively.<br className="hidden sm:block" /> <strong className="font-semibold text-foreground">No prior art experience required.</strong>
+          </p>
+        </div>
         
         <div className="mt-16 sm:mt-20">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

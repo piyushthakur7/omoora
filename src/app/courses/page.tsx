@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { CourseCard } from "@/components/ui/CourseCard";
+import { CourseList } from "@/components/courses/CourseList";
 import { courses } from "@/data/courses";
 
 export const metadata: Metadata = {
@@ -9,9 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function CoursesPage() {
-  const standardCourses = courses.filter((c) => !c.isPremium);
-  const premiumCourses = courses.filter((c) => c.isPremium);
-
   return (
     <div className="bg-brand-50 min-h-screen py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -20,29 +17,19 @@ export default function CoursesPage() {
           subtitle="Discover the perfect course for your creative journey, whether you are a beginner or a spiritual seeker looking for transformation." 
         />
         
-        <div className="mt-16 sm:mt-20">
-          <h3 className="text-2xl font-playfair font-semibold text-foreground mb-8 border-b border-brand-200 pb-2">
-            Art Education & Certification
-          </h3>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {standardCourses.map((course) => (
-              <CourseCard key={course.id} {...course} />
-            ))}
-          </div>
+        <div className="mt-16">
+          <CourseList courses={courses} />
         </div>
 
-        {premiumCourses.length > 0 && (
-          <div className="mt-24">
-            <h3 className="text-2xl font-playfair font-semibold text-foreground mb-8 border-b border-brand-200 pb-2 flex items-center gap-2">
-              <span className="text-pastel-gold">✨</span> Premium Transformation Programs
-            </h3>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {premiumCourses.map((course) => (
-                <CourseCard key={course.id} {...course} />
-              ))}
-            </div>
-          </div>
-        )}
+        <div className="mt-24 bg-white p-12 rounded-3xl border border-brand-100 shadow-sm text-center">
+          <h3 className="text-2xl font-playfair font-semibold text-foreground mb-4">Interested in something custom?</h3>
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            We offer personalized programs and corporate workshops tailored to your specific needs and goals. Reach out to us for a consultation.
+          </p>
+          <a href="/#contact" className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-brand-600 text-white font-medium hover:bg-brand-700 transition-all">
+            Get in Touch
+          </a>
+        </div>
       </div>
     </div>
   );

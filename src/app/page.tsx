@@ -63,29 +63,29 @@ export default function Home() {
               <div className="lg:max-w-lg">
                 <SectionHeading title="What We Do" centered={false} subtitle="IP Arts Academy & Omoora" />
                 <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                  Since 2010, IP Arts Academy has nurtured creativity across all ages. With Omoora, we take a step further—combining art with deep emotional healing and mindset transformation.
+                  Since 2010, IP Arts Academy has nurtured creativity across all ages. With Omoora, we go beyond learning—creating a powerful space for inner transformation, emotional healing, and mindset elevation.
                 </p>
                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-muted-foreground lg:max-w-none">
-                  <div className="relative pl-9">
+                  <div className="relative pl-8">
                     <dt className="inline font-semibold text-foreground">
-                      <div className="absolute left-1 top-1 h-5 w-5 rounded-full bg-brand-200"></div>
+                      <span className="absolute left-0 top-0 text-lg">✨</span>
                       Art Education.
                     </dt>
-                    <dd className="inline"> Beginner to advanced programs, including sketching, painting, and mandala art.</dd>
+                    <dd className="inline"> Structured beginner to advanced programs in sketching, painting, and mandala art—building strong artistic foundations with creativity and confidence.</dd>
                   </div>
-                  <div className="relative pl-9">
+                  <div className="relative pl-8">
                     <dt className="inline font-semibold text-foreground">
-                      <div className="absolute left-1 top-1 h-5 w-5 rounded-full bg-pastel-blue"></div>
-                      Healing Services.
+                      <span className="absolute left-0 top-0 text-lg">✨</span>
+                      Healing & Guidance.
                     </dt>
-                    <dd className="inline"> Energy healing, tarot guidance, and emotional healing through art.</dd>
+                    <dd className="inline"> Personalized sessions including energy healing, tarot guidance, and emotional release—helping you gain clarity, balance, and inner peace.</dd>
                   </div>
-                  <div className="relative pl-9">
+                  <div className="relative pl-8">
                     <dt className="inline font-semibold text-foreground">
-                      <div className="absolute left-1 top-1 h-5 w-5 rounded-full bg-pastel-pink"></div>
-                      Premium Transformation.
+                      <span className="absolute left-0 top-0 text-lg">✨</span>
+                      Premium Transformation Programs.
                     </dt>
-                    <dd className="inline"> Specialized programs for emotional growth, self-discovery, and abundance.</dd>
+                    <dd className="inline"> Deep, result-oriented journeys designed to help you overcome emotional blocks, shift limiting beliefs, and step into abundance, confidence, and self-discovery. Designed for those ready to grow, heal, and transform their life through art and inner work.</dd>
                   </div>
                 </dl>
               </div>
@@ -110,21 +110,27 @@ export default function Home() {
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
               <div className="flex flex-col items-center text-center">
-                <dt className="text-xl font-playfair font-semibold leading-7 text-foreground">Kids & Teens</dt>
+                <dt className="text-xl font-playfair font-semibold leading-7 text-foreground flex items-center justify-center gap-2">
+                  <span>✨</span> Kids & Teens
+                </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-muted-foreground">
-                  <p className="flex-auto">Creative learning, skill development, and career-focused training for artistic growth.</p>
+                  <p className="flex-auto">Build confidence, creativity, and strong artistic foundations from an early age—while nurturing focus, expression, and future-ready skills.</p>
                 </dd>
               </div>
               <div className="flex flex-col items-center text-center">
-                <dt className="text-xl font-playfair font-semibold leading-7 text-foreground">Adults & Professionals</dt>
+                <dt className="text-xl font-playfair font-semibold leading-7 text-foreground flex items-center justify-center gap-2">
+                  <span>✨</span> Adults & Professionals
+                </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-muted-foreground">
-                  <p className="flex-auto">Hobby classes, stress relief, and professional learning to spark your creativity.</p>
+                  <p className="flex-auto">Release stress, reconnect with creativity, and explore art as a powerful tool for relaxation, clarity, and personal growth.</p>
                 </dd>
               </div>
               <div className="flex flex-col items-center text-center">
-                <dt className="text-xl font-playfair font-semibold leading-7 text-foreground">Spiritual Seekers</dt>
+                <dt className="text-xl font-playfair font-semibold leading-7 text-foreground flex items-center justify-center gap-2">
+                  <span>✨</span> Seekers & Healers
+                </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-muted-foreground">
-                  <p className="flex-auto">Healing, clarity, emotional release, and personal transformation.</p>
+                  <p className="flex-auto">For those on a deeper journey—seeking emotional healing, inner clarity, and transformation through guided sessions, energy work, and art-based healing.</p>
                 </dd>
               </div>
             </dl>

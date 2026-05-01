@@ -1,10 +1,10 @@
 export const courses = [
   {
     id: "foundation-art",
-    title: "Foundation Art Program",
+    title: "1 to 3-Month Foundation Art Program",
     duration: "1 to 3 Months",
     level: "Beginner",
-    description: "A beginner-friendly program designed to build strong fundamentals in art. Students learn essential techniques including sketching, shading, coloring, and basic painting.",
+    description: "Beginner-friendly program covering sketching, shading, coloring, and basic painting techniques. Designed to build strong fundamentals in art.",
     learnings: [
       "Pencil Sketching Techniques",
       "Light & Shadow (Shading)",
@@ -17,14 +17,14 @@ export const courses = [
     category: "Art Courses",
     isPremium: false,
     image: "/images/courses/foundation-art.jpg",
-    cta: "Book Free Demo"
+    cta: "Enroll Now"
   },
   {
     id: "diploma-fine-arts",
-    title: "Diploma in Fine Arts",
+    title: "1-Year Diploma in Fine Arts",
     duration: "1 Year",
     level: "Beginner to Advanced",
-    description: "A comprehensive and structured program designed for serious learners. Covers advanced techniques and helps students build a professional portfolio.",
+    description: "Advanced structured program including sketching, painting, composition, and portfolio development. Designed for serious learners and career seekers.",
     learnings: [
       "Advanced Sketching & Portraits",
       "Painting (Acrylic, Watercolor, etc.)",
@@ -41,10 +41,10 @@ export const courses = [
   },
   {
     id: "mandala-art",
-    title: "Mandala Art Course",
+    title: "Mandala Art Course (Beginner to Advanced)",
     duration: "Flexible",
     level: "All Levels",
-    description: "A unique course combining art with mindfulness. Learn mandala art based on sacred geometry to enhance focus, relaxation, and creativity.",
+    description: "Learn sacred geometry-based mandala art for relaxation, focus, and creativity. A unique course combining art with mindfulness.",
     learnings: [
       "Mandala Patterns & Structures",
       "Sacred Geometry Basics",
@@ -61,10 +61,10 @@ export const courses = [
   },
   {
     id: "regular-art-classes",
-    title: "Regular Art Classes",
+    title: "Regular Art Classes (Monthly)",
     duration: "Monthly (Ongoing)",
     level: "All Levels (Kids & Adults)",
-    description: "Continuous learning program focusing on overall artistic development. Students explore multiple styles and mediums regularly.",
+    description: "Ongoing classes for kids and adults focusing on overall artistic skill development. Students explore multiple styles and mediums regularly.",
     learnings: [
       "Sketching & Coloring",
       "Painting Techniques",
@@ -84,7 +84,7 @@ export const courses = [
     title: "Art + Healing Transformation Program",
     duration: "Customized",
     level: "All Levels",
-    description: "A deep transformation journey combining art, healing, mindset work, and self-discovery practices.",
+    description: "A deep transformation journey combining art, healing, mindset work, and self-discovery practices. Designed for high-impact personal growth.",
     learnings: [
       "Emotional release through guided art",
       "Energy balancing",
@@ -98,5 +98,65 @@ export const courses = [
     isPremium: true,
     image: "/images/courses/art-healing.jpg",
     cta: "Book Consultation"
+  },
+  {
+    id: "manifestation-mindset",
+    title: "Manifestation & Mindset Program",
+    duration: "Focused Program",
+    level: "All Levels",
+    description: "Program focused on mindset shift, abundance, and emotional alignment. Learn to overcome limiting beliefs and manifest your desired reality.",
+    learnings: [
+      "Mindset Shifting Techniques",
+      "Abundance Alignment",
+      "Emotional Clearing",
+      "Manifestation Practices"
+    ],
+    targetAudience: "Individuals seeking mindset shifts and abundance",
+    price: "5,000",
+    priceMax: "15,000",
+    category: "Transformation",
+    isPremium: true,
+    image: "/images/courses/mindset-program.jpg",
+    cta: "Start Journey"
+  },
+  {
+    id: "online-mandala",
+    title: "Online Mandala Course",
+    duration: "Self-Paced",
+    level: "All Levels",
+    description: "Learn mandala art from home with guided video sessions. Covers sacred geometry and intricate pattern creation at your own pace.",
+    learnings: [
+      "Digital/Home Mandala Basics",
+      "Video-Guided Sessions",
+      "Sacred Geometry at Home",
+      "Intricate Pattern Creation"
+    ],
+    targetAudience: "Online learners, remote art enthusiasts",
+    price: "999",
+    priceMax: "2,999",
+    category: "Online Courses",
+    isPremium: false,
+    image: "/images/courses/online-mandala.jpg",
+    cta: "Enroll Online"
+  },
+  {
+    id: "online-healing-art",
+    title: "Online Healing & Art Programs",
+    duration: "Digital Program",
+    level: "All Levels",
+    description: "Digital programs combining art exercises with healing techniques. Accessible from anywhere to help you find peace and express creativity.",
+    learnings: [
+      "Digital Art Therapy Exercises",
+      "Healing Meditation & Art",
+      "Remote Emotional Expression",
+      "Self-Guided Healing Path"
+    ],
+    targetAudience: "Seekers looking for remote healing through art",
+    price: "2,000",
+    priceMax: "10,000",
+    category: "Online Courses",
+    isPremium: false,
+    image: "/images/courses/online-healing.jpg",
+    cta: "Explore Digital"
   }
 ];
