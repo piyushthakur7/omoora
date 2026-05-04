@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { X, Calendar, MapPin, AlertTriangle, ArrowRight } from "lucide-react";
 import { buttonVariants } from "./Button";
 import Link from "next/link";
+import Image from "next/image";
 
 export function DualWorkshopPopup() {
   const [showWomens, setShowWomens] = useState(false);
@@ -45,7 +46,16 @@ export function DualWorkshopPopup() {
             </button>
           )}
 
-          <div className="p-8">
+          <div className="relative w-full aspect-square sm:aspect-video sm:h-64 bg-gray-100 rounded-t-2xl overflow-hidden border-b border-gray-100">
+            <Image 
+              src="/images/site/popup-camp.jpeg"
+              alt="Gut Healing Consultation Camp"
+              fill
+              className="object-cover object-top"
+            />
+          </div>
+
+          <div className="p-6 sm:p-8 pt-6">
             <div className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-brand-700 uppercase bg-brand-100 rounded-full">
               Special Camp
             </div>
@@ -150,7 +160,16 @@ export function DualWorkshopPopup() {
             <X className="w-5 h-5" />
           </button>
 
-          <div className="p-8">
+          <div className="relative w-full aspect-square sm:aspect-video sm:h-64 bg-rose-50 rounded-t-2xl overflow-hidden border-b border-rose-50">
+            <Image 
+              src="/images/site/popup-womens.jpeg"
+              alt="Women's Healing Workshop"
+              fill
+              className="object-cover object-top"
+            />
+          </div>
+
+          <div className="p-6 sm:p-8 pt-6">
             <div className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-rose-700 uppercase bg-rose-100 rounded-full">
               Special Workshop
             </div>
