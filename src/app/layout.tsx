@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     template: "%s | Omoora Art & Design Studio",
     default: "Omoora | Beyond Art. A Creative Awakening.",
   },
-  description: "Omoora by IP Arts Academy offers a unique combination of Art Education, Healing, and Transformation Services including sketch, mandala art, tarot, and energy healing.",
-  keywords: ["art courses", "mandala art", "energy healing", "tarot guidance", "transformation programs", "IP Arts Academy"],
+  description: "Omoora by IPA Arts Academy offers a unique combination of Art Education, Healing, and Transformation Services including sketch, mandala art, tarot, and energy healing.",
+  keywords: ["art courses", "mandala art", "energy healing", "tarot guidance", "transformation programs", "IPA Arts Academy"],
   openGraph: {
     title: "Omoora | Beyond Art. A Creative Awakening.",
     description: "Discover a unique combination of Art Education, Healing, and Transformation Services.",

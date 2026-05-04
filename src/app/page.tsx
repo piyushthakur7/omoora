@@ -71,9 +71,9 @@ export default function Home() {
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
             <div className="lg:pr-8 lg:pt-4">
               <div className="lg:max-w-lg">
-                <SectionHeading title="What We Do" centered={false} subtitle="IP Arts Academy & Omoora" />
+                <SectionHeading title="What We Do" centered={false} subtitle="IPA Arts Academy & Omoora" />
                 <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                  Since 2010, IP Arts Academy has nurtured creativity across all ages. With Omoora, we go beyond learning—creating a powerful space for inner transformation, emotional healing, and mindset elevation.
+                  Since 2010, IPA Arts Academy has nurtured creativity across all ages. With Omoora, we go beyond learning—creating a powerful space for inner transformation, emotional healing, and mindset elevation.
                 </p>
                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-muted-foreground lg:max-w-none">
                   <div className="relative pl-8">
@@ -295,7 +295,7 @@ export default function Home() {
               />
               <div className="mt-8 space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Founded by IP Arts Academy in 2010, Omoora was born from a simple yet profound realization: art is not just a skill to be learned, but a path to self-discovery and emotional healing.
+                  Founded by IPA Arts Academy in 2010, Omoora was born from a simple yet profound realization: art is not just a skill to be learned, but a path to self-discovery and emotional healing.
                 </p>
                 <p>
                   Our mission is to provide a sanctuary where creativity meets spirituality. We aim to nurture the artist within everyone, helping them find balance, peace, and abundance through the transformative power of artistic expression.

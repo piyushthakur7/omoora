@@ -23,7 +23,7 @@ export function Footer() {
             </Link>
             <p className="text-sm leading-6 text-muted-foreground max-w-xs">
               Beyond Art. A Creative Awakening. <br />
-              By IP Arts Academy • Since 2010. Offering a unique combination of Art Education, Healing, and Transformation Services.
+              By IPA Arts Academy • Since 2010. Offering a unique combination of Art Education, Healing, and Transformation Services.
             </p>
             <div className="flex space-x-6">
               <a href="https://maps.app.goo.gl/A3fmZy4DyXtMSKzv6?g_st=awb" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-brand-600">
