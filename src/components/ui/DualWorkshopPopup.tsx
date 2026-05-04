@@ -113,6 +113,12 @@ export function DualWorkshopPopup() {
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
+
+            <div className="mt-6 pt-4 border-t border-gray-100 text-center text-xs text-gray-500 space-y-1">
+              <p className="font-semibold text-gray-700">Omoora Art & Design Studio</p>
+              <p>By IPAArtsAcademy | Since 2010</p>
+              <p className="pt-1">Contact: 07042130555, 7042104555</p>
+            </div>
           </div>
           
           {/* Overlay to click and bring to front if it's in the background */}
@@ -211,6 +217,12 @@ export function DualWorkshopPopup() {
                 Book Now
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-rose-100 text-center text-xs text-gray-500 space-y-1">
+              <p className="font-semibold text-gray-700">Omoora Art & Design Studio</p>
+              <p>By IPAArtsAcademy | Since 2010</p>
+              <p className="pt-1">Contact: 07042130555, 7042104555</p>
             </div>
           </div>
         </div>
