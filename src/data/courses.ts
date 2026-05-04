@@ -116,7 +116,7 @@ export const courses = [
     priceMax: "15,000",
     category: "Transformation",
     isPremium: true,
-    image: "/images/courses/mindset-program.jpg",
+    image: "/images/courses/art-healing.jpg",
     cta: "Start Journey"
   },
   {
@@ -136,7 +136,7 @@ export const courses = [
     priceMax: "2,999",
     category: "Online Courses",
     isPremium: false,
-    image: "/images/courses/online-mandala.jpg",
+    image: "/images/courses/mandala-art.jpg",
     cta: "Enroll Online"
   },
   {
@@ -156,7 +156,7 @@ export const courses = [
     priceMax: "10,000",
     category: "Online Courses",
     isPremium: false,
-    image: "/images/courses/online-healing.jpg",
+    image: "/images/site/what-we-do.jpg",
     cta: "Explore Digital"
   }
 ];
