@@ -28,7 +28,7 @@ export function Navbar() {
         {/* Logo */}
         <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-12 w-12 overflow-hidden transition-transform duration-300 group-hover:scale-105">
+            <div className="relative h-12 w-12 shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
               <Image 
                 src="/logofinal.jpeg" 
                 alt="Omoora Logo" 
@@ -37,9 +37,15 @@ export function Navbar() {
                 priority
               />
             </div>
-            <span className="font-playfair font-bold text-2xl tracking-tight bg-gradient-to-r from-brand-800 via-brand-600 to-brand-800 bg-clip-text text-transparent">
-              Omoora
-            </span>
+            <div className="flex flex-col justify-center">
+              <span className="font-playfair font-bold text-xl md:text-2xl tracking-tight bg-gradient-to-r from-brand-800 via-brand-600 to-brand-800 bg-clip-text text-transparent leading-none">
+                Omoora
+              </span>
+              <span className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground leading-tight mt-1 hidden xs:block sm:block font-medium">
+                Art & Design Studio <br />
+                By IPAArtsAcademy Since 2010
+              </span>
+            </div>
           </Link>
         </div>
 
@@ -109,7 +115,7 @@ export function Navbar() {
             
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <div className="relative h-8 w-8">
+                <div className="relative h-10 w-10 shrink-0">
                   <Image 
                     src="/logofinal.jpeg" 
                     alt="Omoora Logo" 
@@ -117,7 +123,13 @@ export function Navbar() {
                     className="object-contain"
                   />
                 </div>
-                <span className="font-playfair font-semibold text-lg">Omoora</span>
+                <div className="flex flex-col justify-center">
+                  <span className="font-playfair font-semibold text-lg leading-none">Omoora</span>
+                  <span className="text-[9px] text-muted-foreground leading-tight mt-1 font-medium">
+                    Art & Design Studio <br />
+                    By IPAArtsAcademy Since 2010
+                  </span>
+                </div>
               </div>
               <button onClick={() => setMobileMenuOpen(false)}>
                 <X className="h-6 w-6" />
