@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CourseCard } from "@/components/ui/CourseCard";
 import { events, healingServices } from "@/data/events";
+import { DualWorkshopPopup } from "@/components/ui/DualWorkshopPopup";
 
 export const metadata: Metadata = {
   title: "Events, Workshops & Healing Services",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function EventsPage() {
   return (
     <div className="bg-white min-h-screen py-24 sm:py-32">
+      <DualWorkshopPopup />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
           <p className="text-brand-600 font-semibold tracking-widest uppercase text-sm mb-4">Create • Heal • Transform</p>
