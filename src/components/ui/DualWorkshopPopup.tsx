@@ -46,12 +46,13 @@ export function DualWorkshopPopup() {
             </button>
           )}
 
-          <div className="relative w-full aspect-square sm:aspect-video sm:h-64 bg-gray-100 rounded-t-2xl overflow-hidden border-b border-gray-100">
+          <div className="w-full bg-white rounded-t-2xl overflow-hidden border-b border-gray-100">
             <Image 
               src="/images/site/popup-camp.jpeg"
               alt="Gut Healing Consultation Camp"
-              fill
-              className="object-cover object-top"
+              width={1200}
+              height={1200}
+              className="w-full h-auto"
             />
           </div>
 
@@ -160,12 +161,13 @@ export function DualWorkshopPopup() {
             <X className="w-5 h-5" />
           </button>
 
-          <div className="relative w-full aspect-square sm:aspect-video sm:h-64 bg-rose-50 rounded-t-2xl overflow-hidden border-b border-rose-50">
+          <div className="w-full bg-white rounded-t-2xl overflow-hidden border-b border-rose-50">
             <Image 
               src="/images/site/popup-womens.jpeg"
               alt="Women's Healing Workshop"
-              fill
-              className="object-cover object-top"
+              width={1200}
+              height={1200}
+              className="w-full h-auto"
             />
           </div>
 
