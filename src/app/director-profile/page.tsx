@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Director Profile | Tanvee P Rathore",
-  description: "Learn more about Tanvee P Rathore, visionary leader, healer, and creative entrepreneur behind IP Arts Academy and OMOORA.",
+  description: "Learn more about Tanvee P Rathore, visionary leader, healer, and creative entrepreneur behind IPA Arts Academy and OMOORA.",
 };
 
 export default function DirectorProfilePage() {
@@ -28,7 +28,7 @@ export default function DirectorProfilePage() {
               <ul className="space-y-4 text-sm text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <span className="text-lg">📍</span>
-                  <span className="font-medium text-foreground pt-0.5">IP Arts Academy</span>
+                  <span className="font-medium text-foreground pt-0.5">IPA Arts Academy</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-lg">🌐</span>
@@ -49,7 +49,7 @@ export default function DirectorProfilePage() {
           <div className="lg:col-span-8 lg:pl-8">
             <SectionHeading 
               title="Meet Tanvee P Rathore" 
-              subtitle="Founder & Director – IP Arts Academy | Founder – OMOORA | Spiritual Healer | Mandala Expert | Transformation Coach | Author"
+              subtitle="Founder & Director – IPA Arts Academy | Founder – OMOORA | Spiritual Healer | Mandala Expert | Transformation Coach | Author"
               centered={false} 
             />
             
@@ -72,7 +72,7 @@ export default function DirectorProfilePage() {
                 <h3 className="text-2xl font-semibold text-foreground mb-4 font-playfair">Brands & Leadership</h3>
                 <div className="space-y-4">
                   <div className="bg-white p-5 rounded-xl shadow-sm border border-brand-100">
-                    <h4 className="font-semibold text-brand-800 text-lg">IP Arts Academy</h4>
+                    <h4 className="font-semibold text-brand-800 text-lg">IPA Arts Academy</h4>
                     <p className="mt-2 text-sm">A structured creative institution offering professional art education blended with emotional and creative development.</p>
                   </div>
                   <div className="bg-white p-5 rounded-xl shadow-sm border border-brand-100">
@@ -133,7 +133,7 @@ export default function DirectorProfilePage() {
                   <li className="flex items-start gap-3"><span className="text-xl">📖</span> <span>Author of the book: "The Secrets of Mandala"</span></li>
                   <li className="flex items-start gap-3"><span className="text-xl">📘</span> <span>India Book of Records Holder (Record Breaker)</span></li>
                   <li className="flex items-start gap-3"><span className="text-xl">🥇</span> <span>Honored with multiple awards for contribution in art, creativity, and healing</span></li>
-                  <li className="flex items-start gap-3"><span className="text-xl">🎓</span> <span>Successfully built and led IP Arts Academy with structured programs</span></li>
+                  <li className="flex items-start gap-3"><span className="text-xl">🎓</span> <span>Successfully built and led IPA Arts Academy with structured programs</span></li>
                   <li className="flex items-start gap-3"><span className="text-xl">🌍</span> <span>Established OMOORA as a unique Art + Healing + Spiritual brand</span></li>
                   <li className="flex items-start gap-3"><span className="text-xl">👩‍🎓</span> <span>Mentored and trained numerous students in mandala and creative arts</span></li>
                   <li className="flex items-start gap-3"><span className="text-xl">✨</span> <span>Created a niche in Art + Healing + Transformation industry</span></li>
